@@ -18,7 +18,7 @@ export  function showError() {
 
 export function showAlert() {
   alert({
-    text: 'Entry your country',
+    text: 'Enter your country',
   })
 }
 
