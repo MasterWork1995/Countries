@@ -1,4 +1,4 @@
-import { error, defaultModules } from '../../node_modules/@pnotify/core/dist/PNotify.js';
+import { error, alert, defaultModules } from '../../node_modules/@pnotify/core/dist/PNotify.js';
 import * as PNotifyMobile from '../../node_modules/@pnotify/mobile/dist/PNotifyMobile.js';
 
 import "@pnotify/core/dist/PNotify.css";
@@ -10,12 +10,16 @@ defaultModules.set(PNotifyMobile, {});
 
 
 
-function showMessage() {
+export  function showError() {
   error({
     text: 'Too many matches found. Please enter a more specific query!',
 });
-};
+}
 
+export function showAlert() {
+  alert({
+    text: 'Entry your country',
+  })
+}
 
-export default showMessage;
 
