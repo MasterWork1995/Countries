@@ -3,7 +3,7 @@ import './styles.css';
 import templates from './templates/countries.hbs';
 import listTemplate from './templates/list.hbs';
 import refs from './js/refs.js';
-import { showError, showAlert } from './js/notification.js';
+import { showMessage, showAlert, showError } from './js/notification.js';
 import fetchCountries from './js/fetchCountries.js';
 import updateMarkup from './js/updateMarkup.js';
 
@@ -18,16 +18,21 @@ refs.input.addEventListener(
     }
     fetchCountries(inputValue).then(data => {
       if (data.length > 10) {
-        showError();
+        showMessage();
+        return
       }
 
       if (data.length >= 2 && data.length <= 10) {
         updateMarkup(listTemplate, data);
+        return
       }
 
       if (data.length === 1) {
         updateMarkup(templates, data);
+        return
 
+      } else {
+        showError();
       }
     });
   }, 500),
