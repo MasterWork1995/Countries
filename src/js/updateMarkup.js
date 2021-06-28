@@ -1,8 +1,8 @@
-const container = document.querySelector('.js-container');
+import refs from './refs';
 
 function updateMarkup(template, articles) {
   const markup = template(articles);
-  container.insertAdjacentHTML('beforeend', markup);
+  refs.container.insertAdjacentHTML('beforeend', markup);
 }
 
 export default updateMarkup;
