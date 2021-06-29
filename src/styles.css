@@ -9,9 +9,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: 'Dancing Script', cursive;
   background-image: url('./img/BG.jpg');
 }
 
@@ -82,5 +80,25 @@ body {
 
   .box__item {
     margin-left: 60px;
+  }
+}
+
+.animation {
+  width: 300px;
+  height: 150px;
+  animation: animation-rotate 10s both infinite;
+}
+
+@keyframes animation-rotate {
+  0% {
+    transform: rotateY(0);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
   }
 }
