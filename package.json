@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://MasterWork1995.github.io/goit-js-hw-12-countries",
+  "homepage": "https://MasterWork1995.github.io/Countries",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-12-countries/"
+    "build": "parcel build src/*.html --public-url /Countries/"
   },
   "repository": {
     "type": "git",
